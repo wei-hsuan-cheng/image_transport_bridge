@@ -37,7 +37,8 @@ colcon build --symlink-install \
 ```bash
 ros2 launch image_transport_bridge decompress_color_image.launch.py \
   input_compressed_topic:=/camera/image_raw/compressed \
-  output_raw_topic:=/camera/image_raw_uncompressed
+  output_raw_topic:=/camera/image_raw_uncompressed \
+  use_sim_time:=true
 ```
 
 ### Depth example
@@ -45,7 +46,8 @@ ros2 launch image_transport_bridge decompress_color_image.launch.py \
 ```bash
 ros2 launch image_transport_bridge decompress_depth_image.launch.py \
   input_compressed_depth_topic:=/camera/depth/image_rect_raw/compressedDepth \
-  output_raw_topic:=/camera/depth/image_rect_raw_uncompressed
+  output_raw_topic:=/camera/depth/image_rect_raw_uncompressed \
+  use_sim_time:=true
 ```
 
 ## Notes
